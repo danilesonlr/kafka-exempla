@@ -18,6 +18,6 @@ public class kafkaController {
     @GetMapping("/producer")
     public ResponseEntity producer(TopicEnum topic, String message){
         producer.producer(topic, message);
-        return ResponseEntity.ok("teste");
+        return ResponseEntity.noContent().build();
     }
 }
